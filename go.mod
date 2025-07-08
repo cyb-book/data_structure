@@ -1,3 +1,3 @@
-module data_structure
+module github.com/cyb-book/data_structure
 
 go 1.23.6
