@@ -27,8 +27,7 @@ func DeepMerge(v1, v2 map[string]interface{}) map[string]interface{} {
 }
 
 func MergeSlices(s1, s2 []interface{}) []interface{} {
-	result := make([]interface{}, len(s2))
-	copy(result, s1)
+	result := CreateMaxLengthSliceFilledWithFirst(s1, s2)
 	for i, v := range s2 {
 		if i < len(result) {
 			if m1, ok := result[i].(map[string]interface{}); ok {
